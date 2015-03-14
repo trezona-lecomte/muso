@@ -8,6 +8,7 @@ gem 'sqlite3'
 
 group :development, :test do
   gem 'guard'
+  gem 'guard-rails'
 end
 
 # To use ActiveModel has_secure_password
