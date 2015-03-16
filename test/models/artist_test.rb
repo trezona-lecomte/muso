@@ -11,12 +11,15 @@ class ArtistTest < ActiveSupport::TestCase
   end
 
   test 'name should be valid' do
-    @artist.name = " "
+    @artist = Artist.new(name: "   ")
     assert_not @artist.valid?
   end
 
   test 'name should be unique' do
-
+    @duplicate_artist = @artist.dup
+    @duplicate_artist.name = @artist.name.upcase
+    @artist.save
+    assert_not @duplicate_artist.valid?
   end
 
   
