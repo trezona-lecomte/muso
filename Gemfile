@@ -9,6 +9,8 @@ gem 'sqlite3'
 group :development, :test do
   gem 'guard'
   gem 'guard-minitest'
+  gem 'minitest-reporters'
+  gem 'mini_backtrace'
 end
 
 # To use ActiveModel has_secure_password
