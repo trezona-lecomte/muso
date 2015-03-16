@@ -21,7 +21,5 @@ class ArtistTest < ActiveSupport::TestCase
     @artist.save
     assert_not @duplicate_artist.valid?
   end
-
   
-
 end
