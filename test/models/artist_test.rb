@@ -3,10 +3,10 @@ require 'test_helper'
 class ArtistTest < ActiveSupport::TestCase
 
   setup do
-    @artist = Artist.new(name: "The Bee Gees")
+    @artist = Artist.new(name: "Bee Gees")
   end
 
-  test 'should be valid after creation' do
+  test 'should be valid' do
     assert @artist.valid?
   end
 
