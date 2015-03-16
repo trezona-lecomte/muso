@@ -42,6 +42,7 @@ GEM
     celluloid (0.16.0)
       timers (~> 4.0.0)
     coderay (1.1.0)
+    database_cleaner (1.4.1)
     erubis (2.7.0)
     ffi (1.9.6)
     formatador (0.2.5)
@@ -156,6 +157,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  database_cleaner
   guard
   guard-minitest
   mini_backtrace
