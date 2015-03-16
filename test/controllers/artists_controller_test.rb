@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class ArtistsControllerTest < ActionController::TestCase
+  
   setup do
     @artist = artists(:radiohead)
   end
@@ -13,10 +14,18 @@ class ArtistsControllerTest < ActionController::TestCase
 
   test "should create artist" do
     assert_difference('Artist.count') do
-      post :create, artist: { name: @artist.name }
+      post :create, artist: { name: "#{@artist.name} & friends"  }
     end
 
     assert_response 201
+  end
+
+  test "should not create duplicate artist" do
+    assert_no_difference('Artist.count') do
+      post :create, artist: { name: @artist.name }
+    end
+
+    assert_response 422
   end
 
   test "should show artist" do
